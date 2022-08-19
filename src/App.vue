@@ -18,6 +18,13 @@ import Todo from "./components/ToDo.vue";
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin: 60px auto 0;
+  max-width: 800px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 </style>
