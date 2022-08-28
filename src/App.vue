@@ -1,14 +1,10 @@
 <script setup lang="ts">
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-// import HelloWorld from "./components/HelloWorld.vue";
-import Todo from "./components/ToDo.vue";
+import ToDo from "./components/ToDo.vue";
 </script>
 
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
-  <Todo></Todo>
-  <!-- <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" /> -->
+  <ToDo></ToDo>
 </template>
 
 <style>

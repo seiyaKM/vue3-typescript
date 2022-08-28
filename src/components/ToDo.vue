@@ -1,14 +1,5 @@
 <template>
-  <section class="add-item-content">
-    <label for="add-text">input item text</label>
-    <input
-      class="add-item-input"
-      type="text"
-      id="add-text"
-      v-model="state.addItemValue"
-    />
-    <button class="add-button" @click="addItem">add</button>
-  </section>
+  <ToDoInput @update="addItem"></ToDoInput>
   <section class="item-content">
     <ul>
       <li class="wrapper">
@@ -29,15 +20,22 @@
 <script lang="ts">
 import { defineComponent, reactive } from "vue";
 
+import ToDoInput from "./ToDoInput.vue";
+
+interface State {
+  todos: Array<string>;
+}
+
 export default defineComponent({
+  components: {
+    ToDoInput,
+  },
   setup() {
-    const state = reactive({
+    const state = reactive<State>({
       todos: ["text A", "text B", "text C"],
-      addItemValue: "",
     });
-    const addItem = () => {
-      state.todos = [...state.todos, state.addItemValue];
-      state.addItemValue = "";
+    const addItem = (item: string) => {
+      state.todos = [...state.todos, item];
     };
     const deleteItem = (index: number) => {
       state.todos.splice(index, 1);
