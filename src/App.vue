@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import ToDo from "./components/ToDo.vue";
+import Todo from "./components/Todo.vue";
 </script>
 
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
-  <ToDo></ToDo>
+  <Todo></Todo>
 </template>
 
 <style>
